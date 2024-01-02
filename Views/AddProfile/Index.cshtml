@@ -1,0 +1,104 @@
+﻿@model Slaughter_House.Models.AddProfile
+
+<!DOCTYPE html>
+
+
+
+
+<body class="sub_page">
+
+    <div class="register">
+        <h1>Add Eid-ul-Azha Information</h1>
+        <p class="lead">Give time slots of your services!</p>
+    </div>
+
+    <div class="registration-form">
+        <h2>Information Form</h2>
+
+
+        <form asp-action="Index" asp-controller="AddProfile" method="post">
+            <table>
+                <tr>
+                    <td><label asp-for="Username"></label></td>
+                    <td><input asp-for="Username" /></td>
+                    <td><span asp-validation-for="Username" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Which animal you slaughter?</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Animal">Goat </label></td>
+                    <td><input type="radio" asp-for="Animal" value="Goat" /></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Animal">Sheep </label></td>
+                    <td><input type="radio" asp-for="Animal" value="Sheep" /></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Animal">Cow </label></td>
+                    <td><input type="radio" asp-for="Animal" value="Cow" /></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Animal">Camel </label></td>
+                    <td><input type="radio" asp-for="Animal" value="Camel" /></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Your available Eid Day?</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Day">Eid Day 01 </label></td>
+                    <td><input type="radio" asp-for="Day" value="Day 01" /></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Day">Eid Day 02 </label></td>
+                    <td><input type="radio" asp-for="Day" value="Day 02" /></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Day">Eid Day 03 </label></td>
+                    <td><input type="radio" asp-for="Day" value="Day 03" /></td>
+                    <td></td>  
+                </tr>
+
+                <tr>
+                    <td><label asp-for="Price"></label></td>
+                    <td><input asp-for="Price" /></td>
+                    <td><span asp-validation-for="Price" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+            </table>
+            <input type="submit" value="Add Profile" class="btn btn-success" />
+        </form>
+    </div>
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+

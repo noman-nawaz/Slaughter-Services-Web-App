@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Form</title>
+    <style>
+        /* CSS styling for the form */
+        body {
+            background-color: lightgray;
+            font-family: Arial, sans-serif;
+        }
+
+        .payment-form {
+            width: 400px;
+            margin: 0 auto;
+            background-color: ghostwhite;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                color: #555;
+                font-weight: bold;
+            }
+
+            .form-group input[type="text"],
+            .form-group select {
+                width: 100%;
+                padding: 10px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+
+            .form-group .file-input {
+                display: flex;
+                align-items: center;
+            }
+
+                .form-group .file-input input[type="file"] {
+                    margin-right: 10px;
+                }
+
+                .form-group .file-input label {
+                    cursor: pointer;
+                    background-color: #4CAF50;
+                    color: #fff;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    transition: background-color 0.3s ease;
+                }
+
+                    .form-group .file-input label:hover {
+                        background-color: #45a049;
+                    }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+            .submit-btn:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="payment-form">
+        <form asp-action="Index" asp-controller="Payment" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="Address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone No:</label>
+                <input type="text" id="phone" name="PhoneNo" required>
+            </div>
+            <div class="form-group">
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="PaymentMethod" required>
+                    <option value="easypaisa">Easypaisa</option>
+                    <option value="jazzcash">Jazzcash</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount">Total Payable Amount:</label>
+                <input type="text" id="amount" name="TotalPayableAmount" required>
+            </div>
+            <div class="form-group">
+                <label for="payment-screenshot">Payment Screenshot:</label>
+                <div class="file-input">
+                    <input type="file" id="payment-screenshot" name="PaymentScreenshot">
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

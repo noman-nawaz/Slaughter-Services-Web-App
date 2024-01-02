@@ -1,0 +1,65 @@
+﻿@model Slaughter_House.Models.Login
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #45a049;
+            }
+
+        .title {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="title">Welcome to the world of Butchers</h3>
+    <table>
+        <tr>
+            <td>
+
+                <!-- Button with the desired text and redirect link -->
+                <button class="button" onclick="window.location.href='/AddProfile'">Add Profile</button>
+
+            </td>
+        </tr>
+    </table>
+</body>
+
+
+
+</html>

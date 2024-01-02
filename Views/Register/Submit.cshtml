@@ -1,0 +1,48 @@
+﻿@model Slaughter_House.Models.RegisteredButcher
+
+<div class="register">
+    <h2>Thank you for registering!</h2>
+</div>
+
+
+<div class="registration-form">
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <th>Phone:</th>
+            <td>@Model.Phone</td>
+        </tr>
+        <tr>
+            <th>City:</th>
+            <td>@Model.City</td>
+        </tr>
+        <tr>
+            <th>Username:</th>
+            <td>@Model.Username</td>
+        </tr>
+        <tr>
+            <th>Password:</th>
+            <td>@Model.Password</td>
+        </tr>
+        <tr>
+            <th>Confirm Password:</th>
+            <td>@Model.ConfirmPassword</td>
+        </tr>
+        <tr>
+            <th>Experience in Years:</th>
+            <td>@Model.Experience</td>
+        </tr>
+
+        <tr>
+            <th>Medically Fit:</th>
+            <td>@Model.Medical</td>
+        </tr>
+        <tr>
+            <th>Terms & Conditions:</th>
+            <td>Accepted</td>
+        </tr>
+    </table>
+</div>

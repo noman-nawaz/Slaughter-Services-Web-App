@@ -1,0 +1,91 @@
+﻿@model List<Slaughter_House.Models.RegisteredButcher>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Butchers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #45a049;
+            }
+
+        .title {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .payment-button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Butchers</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Experience</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var butcher in Model)
+            {
+                <tr>
+                    <td>@butcher.Username</td>
+                    <td>@butcher.Name</td>
+                    <td>@butcher.City</td>
+                    <td>@butcher.Experience</td>
+                    <td> <button class="button" onclick="location.href='home'">Remove</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+   
+</body>
+</html>
+

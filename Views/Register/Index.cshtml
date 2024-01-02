@@ -1,0 +1,106 @@
+﻿@model Slaughter_House.Models.RegisteredButcher
+
+<!DOCTYPE html>
+
+
+
+
+<body class="sub_page">
+
+    <div class="register">
+        <h1>Butcher Registration</h1>
+        <p class="lead">Register now for your butcher services!</p>
+    </div>
+
+    <div class="registration-form">
+        <h2>Registration Form</h2>
+       
+        <form asp-action="Index" asp-controller="Register" method="post">
+            <table>
+                <tr>
+                    <td><label asp-for="Name"></label></td>
+                    <td><input asp-for="Name" /></td>
+                    <td><span asp-validation-for="Name" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><label asp-for="Phone"></label></td>
+                    <td><input asp-for="Phone" /></td>
+                    <td><span asp-validation-for="Phone" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><label asp-for="City"></label></td>
+                    <td><input asp-for="City" /></td>
+                    <td><span asp-validation-for="City" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><label asp-for="Username"></label></td>
+                    <td><input asp-for="Username" /></td>
+                    <td><span asp-validation-for="Username" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><label asp-for="Password"></label></td>
+                    <td><input asp-for="Password" /></td>
+                    <td><span asp-validation-for="Password" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><label asp-for="ConfirmPassword"></label></td>
+                    <td><input asp-for="ConfirmPassword" /></td>
+                    <td><span asp-validation-for="ConfirmPassword" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><label asp-for="Experience"></label></td>
+                    <td><input asp-for="Experience" /></td>
+                    <td><span asp-validation-for="Experience" class="text-danger"></span></td>
+                    <td></td>
+                </tr>
+
+
+               
+                <tr>
+                    <td>Are you medically fit?</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Medical">Yes </label></td>
+                    <td><input type="radio" asp-for="Medical" value="Yes" /></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><label asp-for="Medical">No </label></td>
+                    <td><input type="radio" asp-for="Medical" value="No" /></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><label asp-for="Liability"></label></td>
+                    <td><input type="checkbox" asp-for="Liability" /></td>
+                    <td><span asp-validation-for="Liability" class="text-danger"></span></td>
+                </tr>
+
+            </table>
+            <input type="submit" value="Register" class="btn btn-success" />
+        </form>
+    </div>
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+

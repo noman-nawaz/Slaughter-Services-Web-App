@@ -1,0 +1,115 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <div class="text-center">
+            <h5>@Model</h5>
+        </div>
+        <!-- slider section -->
+        <section class=" slider_section position-relative">
+            <div class="container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail-box">
+                                        <h1>
+                                            <b>A Perfect Slaughter Services </b><br />
+                                            <span>
+                                                For Sacrificial Animals
+                                            </span>
+                                        </h1>
+                                        <p>
+                                            <h6>
+                                                Worried about the butchers 😌😖 No need to worry now we will provide the best and
+                                                experienced butchers for your Animals this Eid. They will provide you the safety environment
+                                                and will be punctual.
+                                            </h6>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- end slider section -->
+    </div>
+
+    <!-- offer section -->
+
+    <partial name="_ServicesPartialView" />
+
+    <!-- end offer section -->
+    <partial name="_AboutPartialView" />
+
+    <!-- end about section -->
+    <!-- client section -->
+   
+    <vc:review></vc:review>
+     @await Component.InvokeAsync("Review")
+    <!-- end client section -->
+    <!-- contact section -->
+    <!-- info section -->
+   
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script>
+        // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+        // Australia.
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 11,
+                center: {
+                    lat: 40.645037,
+                    lng: -73.880224
+                }
+            });
+
+            var image = "images/maps-and-flags.png";
+            var beachMarker = new google.maps.Marker({
+                position: {
+                    lat: 40.645037,
+                    lng: -73.880224
+                },
+                map: map,
+                icon: image
+            });
+        }
+    </script>
+    <!-- google map js -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+    </script>
+    <!-- end google map js -->
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>
